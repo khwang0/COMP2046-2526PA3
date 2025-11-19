@@ -10,7 +10,7 @@ public class TestRainbowPlayCard {
 
     private Gameboard board;
     @BeforeAll
-    private void setup() {
+    public void setup() {
         board = new Gameboard();
         try {
             Field playersField = Gameboard.class.getDeclaredField("players");
