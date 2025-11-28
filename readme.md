@@ -108,12 +108,15 @@ In both methods, you need to make sure the choice is valid. That is, the card fr
 
 - It has a constructor with two String parameters: name and color.
 - In both abstract methods, you need to prompt the user to input a choice. To play a card, the human player should enter the option number (starting from 1). In `choosePrompt`, the human player should enter the color of the turtle directly (e.g., "red", "green"). Invalid input should be handled by re-prompting the user to enter again.
-- We slightly modify the `toString` method so that it returns the player's name and color followed by the cards in his/her hand. For example:
-```txt
-Alice(green) has the following cards:
-1: PlayCard{green,+1}
-2: PlayCard{red,-1}
-```
+- ~~We slightly modify the `toString` method so that it returns the player's name and color followed by the cards in his/her hand. For example:~~
+
+~~Alice(green) has the following cards:~~
+
+~~1: PlayCard{green,+1}~~
+
+~~2: PlayCard{red,-1}~~
+
+> Updated: The requirement of `toString` is removed. You don't need to modify it.
 
 > Test your class with [TestHumanPlayer.java](TestHumanPlayer.java)  
 
@@ -266,7 +269,8 @@ Please read the latest clarifications on Discord. We will tag them with #PA3C.
 1. In AIPlayer.chooseCardToPlay, the algorithm of AI determines which card to play. It is possible that an AIPlayer will play a "-1" card of its own color if the algorithm decides so. This is acceptable for algorithm RandomAlgorithm.
 2. However, when you implement the anonymous/lambda algorithm, you need to make sure that the AIPlayer will not play a "-1" card of its own color unless there is no other choice.
 3. RainbowPlayCard and ArrowPlayCard are not related. That is, RainbowPlayCard does not extend ArrowPlayCard.
- 
+4. (Updated 28/11/2025) In HumanPlayer toString, the requirement is removed. You don't need to modify it. The numbering of cards should start from 0 instead of 1. 
+
 
 ---
 
